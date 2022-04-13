@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="chrome=1"/>
+<title>School schedule</title>
+<meta name="keywords" content="School schedule NIKA-Soft">
+<script type="text/javascript" src="nika_data.js"></script>
+<script type="text/javascript" src="schedule.js"></script>
+
+<style>
+body{margin:0;padding:0;}
+html, body{height:100%;}
+@font-face {
+  font-family: "RomanaScript";
+  src: local('☺'),             /* IE trick */
+        url('images/RomanaScript.woff') format('woff'),
+        url('images/RomanaScript.ttf') format('truetype'), /* Opera, Safari */
+        url('images/RomanaScript.svg') format('svg'); /* iOS */
+}
+
+a,p {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+
+
+<script type="text/javascript">
+	document.oncontextmenu = function (){return false};
+  if (NIKA.SCHOOL_NAME) {
+        var s = NIKA.SCHEDULE_STR.toLowerCase();
+        s = s.charAt(0).toUpperCase() + s.slice(1)
+        document.title = s + " " + NIKA.SCHOOL_NAME;
+  }
+	window.devicePixelRatio = window.devicePixelRatio || 1;
+	if (screen.availWidth/window.devicePixelRatio < 800) 
+	  location.href = "m.schedule.html";
+</script>	
+
+</head>
+
+<body onload="Init();">
+		<div id="MainDiv" style="width:100%; height:100%; min-width: 1000px; min-height: 700px; overflow-x: hidden; overflow-y: hidden;"> 
+         <canvas id="MainCanvas" style="border:0px;width:100%; height:100%; min-width: 1000px; min-height: 700px;"> 
+         		  <div align="center">
+         		  	<table cols=2 width="100%" border="0px">
+         		  		<tr>
+         		  			<td width="200px">
+         		  				<td>
+         		  <P style="color: red; font-weight: bold; font-size: 16px">It's impossible to show schedule
+             	<P>Your browser doesn't support HTML5
+             		<div  align="left">
+             			<P>You can open&nbsp<a href="m.schedule.html">mobile version</a>
+             			<P>Or update your browser with list below:
+             		<ul>
+             			<li><B>FireFox</B>&nbsp-&nbsp<a href="http://www.mozilla.org/ru/firefox/new">http://www.mozilla.org/ru/firefox/new</a>
+             			<li><B>Opera</B>&nbsp-&nbsp<a href="http://www.opera.com/download/">http://www.opera.com/download/</a>
+             			<li><B>Google Chrome</B>&nbsp-&nbsp<a href="http://www.google.ru/chrome">http://www.google.ru/chrome</a>
+             			<li><B>Internet Explorer 9</B><a href="http://windows.microsoft.com/ru-RU/internet-explorer/downloads/ie-9/worldwide-languages">http://windows.microsoft.com</a>
+								</ul>
+								<tr>
+									<td>
+									<td>
+										<div  align="left">
+											<p><p>To get support please contact us through website&nbsp<a href="http://www.nikasoft.ru/">Nika-Soft</a>
+												or mail to <a href="mailto:support@nikasoft.ru">support@nikasoft.ru</a>
+									</div>
+								</table>
+						</div>		
+    </canvas> 		
+    </div>
+<div id="AddElements">    
+<p id="copyright" style="position: absolute; color: #3CACC4; font-family: Geneva, sans-serif; font-weight: 600; font-size: 14px; width: 30em;">© NIKA-Soft 2022</p>
+<a id="go_mobile" style="position: absolute; color: black; font-weight: bold; font-size: 12px; width: 14em;" href="javascript:void(0);">To mobile version >></a> 
+<a id="go_home" style="visibility: hidden; text-decoration:underline; position: absolute; color: white; font-family: Arial, sans-serif; font-weight: 300; font-size: 18px" href="javascript:void(0);">School site</a> 
+</div>
+</html>
