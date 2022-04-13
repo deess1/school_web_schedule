@@ -1,6 +1,6 @@
 # School schedule on the WEB
 
-This is very optimized pure javascript project to show school, college and other educational schedules on WEB or info-terminals.
+This is very optimized pure javascript project to show school, college and other educational timetables on WEB or info-terminals.
 It support touch screens and has adaptive interface. Solution doesn't use any third party libraries and required HTML5 support only.
 <BR>
   <BR><I>Feature list</I>:
